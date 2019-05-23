@@ -1,0 +1,24 @@
+{
+    "name": "juanmiguelbesada/user-bundle",
+    "description": "Provides user management for your Symfony project",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juan Miguel Besada",
+            "email": "juanmiguelbesada@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "symfony/http-kernel": "^4.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "JuanMiguelBesada\\UserBundle\\": "src/"
+        }
+    }
+}
