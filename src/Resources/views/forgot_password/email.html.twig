@@ -1,0 +1,14 @@
+{% extends "@JMBUser/email.html.twig" %}
+{% trans_default_domain 'JMBUserBundle' %}
+
+{% block subject %}
+    {%- autoescape false -%}
+        {{ 'forgot_password.email.subject'|trans({'%username%': user.username}) }}
+    {%- endautoescape -%}
+{% endblock subject %}
+
+{% block body_text %}
+    {% autoescape false %}
+        {{ 'forgot_password.email.message'|trans({'%username%': user.username, '%confirmationUrl%': confirmationUrl}) }}
+    {% endautoescape %}
+{% endblock %}

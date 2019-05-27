@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="jmb_user.user_class">null</parameter>
+        <parameter key="jmb_user.from_email">null</parameter>
+        <parameter key="jmb_user.forgot_password.template">@JMBUser/forgot_password/email.html.twig</parameter>
+        <parameter key="jmb_user.forgot_password.confirmation_route">jmb_user_forgot_password_confirmation</parameter>
+    </parameters>
+
+    <services>
+        <defaults public="false" />
+
+        <!-- Controllers -->
+        <service id="jmb_user.controller.login" class="JMB\UserBundle\Controller\LoginController" public="true">
+            <argument type="service" id="security.authentication_utils" />
+            <argument type="collection"/>
+        </service>
+        <service id="jmb_user.controller.forgot_password" class="JMB\UserBundle\Controller\ForgotPasswordController" public="true">
+            <argument type="service" id="jmb_user.user_manager.default" />
+            <argument type="service" id="jmb_user.mailer.default" />
+            <argument type="service" id="translator.default" />
+            <argument type="collection"/>
+        </service>
+        <service id="jmb_user.controller.profile" class="JMB\UserBundle\Controller\ProfileController" public="true">
+            <argument type="service" id="jmb_user.user_manager.default" />
+            <argument type="service" id="jmb_user.mailer.default" />
+            <argument type="service" id="translator.default" />
+            <argument type="collection"/>
+        </service>
+
+        <!-- Managers -->
+        <service id="jmb_user.user_manager.default" class="JMB\UserBundle\Manager\UserManager">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%jmb_user.user_class%</argument>
+            <argument type="service" id="security.encoder_factory" />
+        </service>
+
+        <!-- Mailers -->
+        <service id="jmb_user.mailer.default" class="JMB\UserBundle\Mailer\Mailer">
+            <argument type="service" id="mailer" />
+            <argument type="service" id="router"/>
+            <argument type="service" id="twig" />
+            <argument type="collection">
+                <argument key="reset_password" type="collection">
+                    <argument key="from_email">%jmb_user.from_email%</argument>
+                    <argument key="template">%jmb_user.forgot_password.template%</argument>
+                    <argument key="route">%jmb_user.forgot_password.confirmation_route%</argument>
+                </argument>
+            </argument>
+        </service>
+
+        <!-- Validator constraints -->
+        <service id="jmb_user.validator.constraints.user_email" class="JMB\UserBundle\Validator\Constraints\UserEmailValidator">
+            <argument type="service" id="jmb_user.user_manager.default" />
+            <tag name="validator.constraint_validator" />
+        </service>
+
+        <!-- Alias -->
+        <service id="JMB\UserBundle\Manager\UserManagerInterface" alias="jmb_user.user_manager.default"/>
+        <service id="JMB\UserBundle\Mailer\MailerInterface" alias="jmb_user.mailer.default"/>
+    </services>
+</container>

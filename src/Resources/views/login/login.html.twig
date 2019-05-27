@@ -1,0 +1,12 @@
+{% extends "@JMBUser/base.html.twig" %}
+{% trans_default_domain 'JMBUserBundle' %}
+
+{% block page_title 'title.login'|trans %}
+
+{% block jmb_user_content %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    {{ form(form, {'attr': {'action': path('jmb_user_login_check')}}) }}
+    <a href="{{ path('jmb_user_forgot_password') }}">{{ 'link.forgot_password'|trans }}</a>
+{% endblock jmb_user_content %}

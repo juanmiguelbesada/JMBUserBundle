@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="">
+                <source>The email "{{ email }}" does not exists.</source>
+                <target>The email "{{ email }}" does not exists.</target>
+            </trans-unit>
+            <trans-unit id="error.passwords_mismatch">
+                <source>error.passwords_mismatch</source>
+                <target>Passwords do not match</target>
+            </trans-unit>
+            <trans-unit id="error.incorrect_previous_password">
+                <source>error.incorrect_previous_password</source>
+                <target>Incorrect previous password</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

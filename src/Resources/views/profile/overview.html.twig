@@ -1,0 +1,9 @@
+{% extends "@JMBUser/base.html.twig" %}
+{% trans_default_domain 'JMBUserBundle' %}
+
+{% block page_title 'title.profile_overview'|trans %}
+
+{% block jmb_user_content %}
+    {{ 'message.welcome'|trans({'%username%': app.user.username}) }}
+    <a href="{{ path('jmb_user_profile_change_password') }}">{{ 'link.change_password'|trans }}</a>
+{% endblock jmb_user_content %}

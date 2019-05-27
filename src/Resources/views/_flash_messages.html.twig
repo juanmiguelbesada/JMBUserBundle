@@ -1,0 +1,5 @@
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div>{{ message|raw|nl2br }}</div>
+    {% endfor %}
+{% endfor %}

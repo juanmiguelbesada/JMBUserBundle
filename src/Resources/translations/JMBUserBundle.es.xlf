@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="title.login">
+                <source>title.login</source>
+                <target>Inicio de sesión</target>
+            </trans-unit>
+            <trans-unit id="label.username">
+                <source>label.username</source>
+                <target>Nombre de usuario</target>
+            </trans-unit>
+            <trans-unit id="label.email">
+                <source>label.email</source>
+                <target>Correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="label.password">
+                <source>label.password</source>
+                <target>Contraseña</target>
+            </trans-unit>
+            <trans-unit id="label.remember_me">
+                <source>label.remember_me</source>
+                <target>Recordarme</target>
+            </trans-unit>
+            <trans-unit id="button.submit_login">
+                <source>button.submit_login</source>
+                <target>Iniciar sesión</target>
+            </trans-unit>
+            <trans-unit id="link.forgot_password">
+                <source>link.forgot_password</source>
+                <target>¿Olvidaste tu contraseña?</target>
+            </trans-unit>
+            <trans-unit id="title.forgot_password">
+                <source>title.forgot_password</source>
+                <target>¿Olvidaste tu contraseña?</target>
+            </trans-unit>
+            <trans-unit id="help.forgot_password">
+                <source>help.forgot_password</source>
+                <target>Introduce tu email para restablecer tu contraseña</target>
+            </trans-unit>
+            <trans-unit id="button.submit_forgot_password">
+                <source>button.submit_forgot_password</source>
+                <target>Restablecer contraseña</target>
+            </trans-unit>
+            <trans-unit id="link.back_login">
+                <source>link.back_login</source>
+                <target>Volver al login</target>
+            </trans-unit>
+            <trans-unit id="message.forgot_password_email_sent">
+                <source>message.forgot_password_email_sent</source>
+                <target>
+                    Se ha enviado un email. Contiene un enlace que debes pulsar para restablecer tu contraseña.
+                    Si no recibes un correo, por favor revisa tu carpeta de correo electrónico no deseado o intentalo de nuevo.
+                </target>
+            </trans-unit>
+            <trans-unit id="title.reset_password">
+                <source>title.reset_password</source>
+                <target>Restablecer contraseña</target>
+            </trans-unit>
+            <trans-unit id="error.invalid_forgot_password_confirmation_token">
+                <source>error.invalid_forgot_password_confirmation_token</source>
+                <target>Tu código de confirmación no existe o ha caducado.</target>
+            </trans-unit>
+            <trans-unit id="forgot_password.email.subject">
+                <source>forgot_password.email.subject</source>
+                <target>Restablecer contraseña</target>
+            </trans-unit>
+            <trans-unit id="forgot_password.email.message">
+                <source>forgot_password.email.message</source>
+                <target>
+                    Hola %username%!
+
+                    Para restablecer tu contraseña, por favor visita %confirmationUrl%
+
+                    Atentamente,
+                    el equipo.
+                </target>
+            </trans-unit>
+            <trans-unit id="label.new_password">
+                <source>label.new_password</source>
+                <target>Nueva contraseña</target>
+            </trans-unit>
+            <trans-unit id="label.confirm_new_password">
+                <source>label.confirm_new_password</source>
+                <target>Confirmación nueva contraseña</target>
+            </trans-unit>
+            <trans-unit id="button.submit_reset_password">
+                <source>button.submit_reset_password</source>
+                <target>Cambiar contraseña</target>
+            </trans-unit>
+            <trans-unit id="message.password_reset_successfully">
+                <source>message.password_reset_successfully</source>
+                <target>Tu contraseña ha sido restablecida correctamente.</target>
+            </trans-unit>
+            <trans-unit id="title.profile">
+                <source>title.profile</source>
+                <target>Perfil</target>
+            </trans-unit>
+            <trans-unit id="title.profile_overview">
+                <source>title.profile_overview</source>
+                <target>Perfil</target>
+            </trans-unit>
+            <trans-unit id="message.welcome">
+                <source>message.welcome</source>
+                <target>Hola %username%</target>
+            </trans-unit>
+            <trans-unit id="link.change_password">
+                <source>link.change_password</source>
+                <target>Cambiar contraseña</target>
+            </trans-unit>
+            <trans-unit id="title.change_password">
+                <source>title.change_password</source>
+                <target>Cambiar contraseña</target>
+            </trans-unit>
+            <trans-unit id="help.change_password">
+                <source>help.change_password</source>
+                <target>Cambia tu contraseña</target>
+            </trans-unit>
+            <trans-unit id="label.previous_password">
+                <source>label.previous_password</source>
+                <target>Contraseña anterior</target>
+            </trans-unit>
+            <trans-unit id="button.submit_change_password">
+                <source>button.submit_change_password</source>
+                <target>Cambiar contraseña</target>
+            </trans-unit>
+            <trans-unit id="link.profile_overview">
+                <source>link.profile_overview</source>
+                <target>Perfil</target>
+            </trans-unit>
+            <trans-unit id="message.password_changed_successfully">
+                <source>message.password_changed_successfully</source>
+                <target>Tu contraseña ha sido cambiada correctamente.</target>
+            </trans-unit>
+            <trans-unit id="link.logout">
+                <source>link.logout</source>
+                <target>Salir</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing
+        https://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="jmb_user_login" path="/login" controller="jmb_user.controller.login:login" />
+    <route id="jmb_user_login_check" path="/login_check" />
+    <route id="jmb_user_forgot_password" path="/forgot-password" controller="jmb_user.controller.forgot_password:forgotPassword" />
+    <route id="jmb_user_forgot_password_confirmation" path="/forgot-password/{token}" controller="jmb_user.controller.forgot_password:resetPassword" />
+    <route id="jmb_user_profile" path="/profile" controller="jmb_user.controller.profile:index" />
+    <route id="jmb_user_profile_overview" path="/profile/overview" controller="jmb_user.controller.profile:overview" />
+    <route id="jmb_user_profile_change_password" path="/profile/change-password" controller="jmb_user.controller.profile:changePassword" />
+</routes>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block page_title ''%}</title>
+    {% block metatags %}{% endblock metatags %}
+    {% block stylesheets %}{% endblock stylesheets %}
+</head>
+{% block body %}
+<body {% block body_attrs %}class="{% block body_class '' %}"{% endblock body_attrs %}>
+    {% block body_content %}
+        <div>
+            {% block flash_messages %}{{ include('@JMBUser/_flash_messages.html.twig') }}{% endblock flash_messages %}
+            {% block jmb_user_content %}{% endblock jmb_user_content %}
+        </div>
+        {% block javascripts %}{% endblock javascripts %}
+    {% endblock body_content %}
+</body>
+{% endblock body %}
+</html>
