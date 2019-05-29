@@ -60,6 +60,14 @@ abstract class User implements UserInterface
     protected $roles = [];
 
     /**
+     * User constructor.
+     */
+    public function __construct()
+    {
+        $this->addRole(static::ROLE_USER);
+    }
+
+    /**
      * @return string
      */
     public function getUsername(): string

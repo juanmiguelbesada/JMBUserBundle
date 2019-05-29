@@ -6,6 +6,8 @@ use Symfony\Component\Security\Core\User\UserInterface as SymfonyUserInterface;
 
 interface UserInterface extends SymfonyUserInterface
 {
+    const ROLE_USER = 'ROLE_USER';
+
     public function setUsername(string $username);
 
     public function getUsername(): string;
